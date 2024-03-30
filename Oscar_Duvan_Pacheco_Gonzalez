@@ -1,8 +1,9 @@
-from abc import ABC
+from abc import ABC, abstractmethod
+
 
 # Observer Pattern
 class Observer(ABC):
-
+    @abstractmethod
     def update(self):
         pass
 #Se define la claseObserver, que define un método abstracto update(). Este método será implementado por las clases concretas que actúan como observadores.
@@ -47,7 +48,7 @@ class Store:
 
 # Strategy Pattern
 class PricingStrategy(ABC):
-    
+    @abstractmethod
     def calcular_precio(self, precio):
         pass
 
